@@ -28,3 +28,4 @@ class Track(models.Model):
     album = models.CharField(max_length=250)
     artists = ArrayField(models.CharField(max_length=250))
 
+

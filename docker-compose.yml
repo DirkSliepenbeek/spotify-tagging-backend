@@ -29,7 +29,7 @@ services:
       - spotify_tagging_docker_network
   web:
     build:
-      context: ./
+      context: .
       dockerfile: docker/local/Dockerfile-local
     volumes:
       - ./:/app
@@ -43,7 +43,6 @@ services:
       DJANGO_SETTINGS_MODULE: spotify_tagging.settings
     networks:
       - spotify_tagging_docker_network
-    entrypoint: ''
 networks:
   spotify_tagging_docker_network:
     external: false
